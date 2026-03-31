@@ -1,66 +1,65 @@
-Linked List in Java
+🔗 Linked List Implementation in Java
 
-This repository contains implementations of Linked List data structures in Java along with various operations and important interview problems.
-The goal of this repository is to understand the internal working of Linked Lists and practice common coding problems.
+This repository contains the implementation of Linked List Data Structure using Java along with multiple operations and commonly asked coding problems.
+The project focuses on understanding how linked lists work internally and solving important interview-level problems.
 
-📌 Topics Covered
-Basic Linked List Operations
-Creating a Linked List
-Inserting nodes
+📖 About the Project
+
+Linked List is a fundamental data structure where elements are stored in nodes and each node points to the next node in the sequence.
+
+In this repository, I implemented Linked Lists from scratch using Java and practiced various important operations and algorithmic problems related to Linked Lists.
+
+⚙️ Features Implemented
+Basic Operations
+Create Linked List
+Insert Node
 Insert at beginning
 Insert at end
 Insert at specific position
-Deleting nodes
-Delete from beginning
-Delete from end
-Delete from specific position
-Searching an element in Linked List
-Printing the Linked List
-Intermediate Linked List Problems
-Reverse a Linked List
-Remove Nth Node from the End
+Delete Node
+Delete first node
+Delete last node
+Delete specific node
+Search element
+Display Linked List
+Important Linked List Problems
+Reverse Linked List
+Remove Nth Node from End
 Check Palindrome Linked List
 Detect Cycle in Linked List
-Remove Cycle in Linked List
-Advanced Linked List Algorithms
+Remove Cycle from Linked List
+Advanced Algorithms
 Merge Sort on Linked List
 Zig-Zag Linked List
 Doubly Linked List
 Creation of Doubly Linked List
-Insert operations
-Delete operations
+Insertion Operations
+Deletion Operations
 Reverse Doubly Linked List
-Collection Framework Linked List
+Java Collection Framework
 
-Usage of Java Collection Framework:
+Implementation using Java’s LinkedList Collection Class
 
-Using LinkedList class
+Operations practiced:
+
 Add elements
 Remove elements
 Access elements
 Iterate through LinkedList
-🛠 Technologies Used
-Java
-Object-Oriented Programming
+🧠 Concepts Practiced
 Data Structures
-🎯 Purpose of this Repository
-Practice Data Structures using Java
-Strengthen problem-solving skills
-Prepare for coding interviews and technical assessments
-Understand the internal implementation of Linked Lists
-📚 Problems Implemented
+Object-Oriented Programming
+Pointer Manipulation
+Algorithmic Problem Solving
 
-Some important problems included in this repository:
+🎯 Learning Outcome
 
-Reverse Linked List
-Remove Nth Node From End
-Palindrome Linked List
-Detect Cycle in Linked List
-Remove Cycle in Linked List
-Merge Sort in Linked List
-Zig Zag Linked List
-Doubly Linked List Reverse
+Through this project I learned:
 
+Implementation of Linked Lists from scratch
+Handling node references and pointers
+Solving common interview problems
+Applying sorting algorithms on Linked Lists
+👨‍💻 Author
 
-Gaikwad Madhav
-
+Madhav Gaikwad
