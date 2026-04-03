@@ -130,7 +130,40 @@ public class LinkedList {
      }
 
      //Searching using Recursive approach
-     
+     public int helper(Node head, int key){
+        if(head == null){
+            return -1;
+        }
+        if(head.data == key){
+            return 0;
+        }
+        int idx = helper(head.next, key);
+        if(idx == -1){
+            return -1;
+        }
+        return idx+1;
+     }
+     public int recSearch(int key){
+        return helper(head, key);
+     }
+
+
+     //Reverse a linked list using iterative approach
+     //leetcode 206 problem reverse a linked list
+     public void reverse(){
+        Node prev = null;
+        Node curr = tail =head;
+        Node next;
+
+        while( curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+     }
+
     public static void main(String args[]){
        LinkedList ll = new LinkedList();
         ll.print();
@@ -151,10 +184,18 @@ public class LinkedList {
 
         ll.removeLast();
         ll.print();
-        System.out.println(ll.size);
+        //System.out.println(ll.size);
 
-        System.out.println(ll.itrSearch(3));
-                System.out.println(ll.itrSearch(10));
+        //System.out.println(ll.itrSearch(3));
+        //System.out.println(ll.itrSearch(10));
+
+
+        //System.out.println(ll.recSearch(3));
+        //System.out.println(ll.recSearch(10));
+
+        ll.print();
+        ll.reverse();
+        ll.print();
 
     }
 }
