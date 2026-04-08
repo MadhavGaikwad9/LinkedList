@@ -164,9 +164,77 @@ public class LinkedList {
         head = prev;
      }
 
+     //Find & Remove Nth node from End
+     //iterative approach Leetcode 19 problem 
+     public void delteNthfromEnd(int n){
+        int sz=0;
+        Node temp = head;
+        while(temp != null){
+            temp = temp.next;
+            sz++;
+        }
+ 
+        if(n == sz){
+            head = head.next;
+            return;
+        } 
+        int i = 1;
+        int iToFind = sz -n;
+        Node prev = head;
+        while(i < iToFind){
+            prev = prev.next;
+            i++;
+
+        }
+
+        prev.next = prev.next.next;
+        return;
+     }
+
+     //slow-Fast Approach
+     private Node findMid(Node head){
+        Node slow=head;
+        Node fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+     }
+     //Checking if LL is a palindrome or not
+     public boolean checkPalindrome(){
+        if(head == null ||head.next == null){
+            return true;
+        }
+        //find mid
+        Node midNode = findMid(head);
+
+        //reverse 2nd half
+        Node prev = null;
+        Node curr = midNode;
+        Node next;
+        while( curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+       Node right = prev;
+        Node left = head;
+        // check left half & right half
+
+        while(right != null){
+            if(left.data != right.data){
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+        }
+        return true;
+     }
     public static void main(String args[]){
        LinkedList ll = new LinkedList();
-        ll.print();
+       /*  ll.print();
         ll.addFirst(2);
         ll.print();
         ll.addFirst(1);
@@ -179,11 +247,11 @@ public class LinkedList {
         ll.print();//1->2->3->4->5
         System.out.println(ll.size);
 
-        ll.removeFirst();
-        ll.print();
+        //ll.removeFirst();
+        //ll.print();
 
-        ll.removeLast();
-        ll.print();
+        //ll.removeLast();
+        //ll.print();
         //System.out.println(ll.size);
 
         //System.out.println(ll.itrSearch(3));
@@ -193,9 +261,21 @@ public class LinkedList {
         //System.out.println(ll.recSearch(3));
         //System.out.println(ll.recSearch(10));
 
+        //ll.print();
+        //ll.reverse();
+        //ll.print();
+        //ll.delteNthfromEnd(3);
+        //ll.print();*/
+
+        ll.addLast(1);
+        ll.addLast(2);
+
+        ll.addLast(2);
+       ll.addLast(1);
+
+
         ll.print();
-        ll.reverse();
-        ll.print();
+        System.out.println(ll.checkPalindrome());
 
     }
 }
