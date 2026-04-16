@@ -5,7 +5,7 @@ public class LinkedList {
          int data;
          Node next;
 
-         public Node(int data){
+         public Node(int data){ 
             this.data = data;
             this.next = null;
          }
@@ -232,8 +232,12 @@ public class LinkedList {
         }
         return true;
      }
+
+
+   
     public static void main(String args[]){
-       LinkedList ll = new LinkedList();
+       //LinkedList ll = new LinkedList();
+       //linked list creating
        /*  ll.print();
         ll.addFirst(2);
         ll.print();
@@ -243,29 +247,36 @@ public class LinkedList {
         ll.print();
         ll.addLast(5);
         ll.addMiddle(2, 3);
-        
+
+
+        //ll size
         ll.print();//1->2->3->4->5
         System.out.println(ll.size);
 
-        //ll.removeFirst();
-        //ll.print();
+        //remove method calling at first
+        ll.removeFirst();
+        ll.print();
 
-        //ll.removeLast();
-        //ll.print();
-        //System.out.println(ll.size);
-
-        //System.out.println(ll.itrSearch(3));
-        //System.out.println(ll.itrSearch(10));
+        //remove method calling at last
+        ll.removeLast();
+        ll.print();
+        System.out.println(ll.size);
 
 
-        //System.out.println(ll.recSearch(3));
-        //System.out.println(ll.recSearch(10));
+        //searching method calling
+        System.out.println(ll.itrSearch(3));
+        System.out.println(ll.itrSearch(10));
+        System.out.println(ll.recSearch(3));
+        System.out.println(ll.recSearch(10));
 
-        //ll.print();
-        //ll.reverse();
-        //ll.print();
-        //ll.delteNthfromEnd(3);
-        //ll.print();*/
+        //reverse printing method calling
+        ll.print();
+        ll.reverse();
+        ll.print();
+
+        //deleteNthfromEnd calling
+        ll.delteNthfromEnd(3);
+        ll.print();
 
         ll.addLast(1);
         ll.addLast(2);
@@ -273,9 +284,11 @@ public class LinkedList {
         ll.addLast(2);
        ll.addLast(1);
 
-
+        //checking a linked list is a palindrome or not calling method
         ll.print();
-        System.out.println(ll.checkPalindrome());
+        System.out.println(ll.checkPalindrome());*/
+
+
 
     }
 }
