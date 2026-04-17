@@ -13,7 +13,7 @@ public class DetectLoopinLL{
          }
    }
 
-   public static Node head;   /
+   public static Node head;     
 
    public static boolean isCycle(){
         Node slow = head;
